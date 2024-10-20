@@ -3,23 +3,22 @@
 @import "settings/fonts";
 @import "settings/variables";
 
-
 // example how to use media mixin for responsive
 body {
   background-color: #001722;
 
-  @include media($tablet){
-    background-color: tomato;
+  @include media($tablet) {
+    // background-color: tomato;
   }
 
-  @include media($mobile){
-    background-color: white;
+  @include media($mobile) {
+    // background-color: white;
   }
 }
 
 // .padding {
 //   display: flex;
-//   justify-content: center;  
+//   justify-content: center;
 //   align-items: center;
 // }
 
@@ -33,13 +32,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  @include media($tablet){
-    padding: 10px 50px;
+
+  @include media($tablet) {
   }
 
-  @include media($mobile){
-    padding: 5px 10px;
+  @include media($mobile) {
   }
 
   &__logo {
@@ -47,11 +44,11 @@ body {
     font-family: $sans;
     color: $primary;
     text-transform: uppercase;
-    
+
     span {
       color: $white;
     }
-    
+
     @include media($tablet) {
       font-size: 20px;
     }
@@ -65,27 +62,38 @@ body {
 .headerNav {
   align-items: center;
   display: flex;
-  width: 1020px;
+  width: 80%;
   justify-content: space-between;
+  // border: 1px solid red;
+
+  @include media($tablet) {
+    gap: 20px;
+    a {
+      font-size: 14px;
+    }
+  }
+
+  @include media($mobile) {
+    width: 90%;
+  }
 
   &__list {
     display: flex;
     gap: 30px;
     list-style: none;
-    
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 16px;
+    font-family: $sans;
+    font-weight: bold;
+    color: white;
+
+    &:hover {
+      color: $primary;
     }
 
-    a {
-      text-decoration: none;
-      font-size: 16px;
-      font-family: $sans;
-      font-weight: bold;
-      color: white;
-      
-      &:hover {
-        color: $primary;
-    }
-    
     @include media($tablet) {
       gap: 20px;
       a {
@@ -100,8 +108,8 @@ body {
 
   &__hamburger {
     display: none;
-    
-    @include media($mobile){
+
+    @include media($mobile) {
       position: relative;
       display: inline-flex;
       width: auto;
@@ -112,7 +120,6 @@ body {
   }
 }
 
-
 .hero {
   background-image: url("../assets/images/hero_bg.png");
   background-size: cover;
@@ -122,16 +129,18 @@ body {
   background-position: center;
   // padding: 207px 410px 208px;
   // border: solid red 1px;
-  height: 570px;
-  
+  // height: ;
+  height: 90vh;
+
   @include media($tablet) {
-    width: 100%;
-    height: 400px;
+    // width: 100%;
+    // height: 400px;
   }
 
   @include media($mobile) {
-    width: 100%;
-    height: 200px;
+    // width: 100%;
+    // height: 200px;
+    height: 70vh;
   }
 
   &__textContainer {
@@ -140,13 +149,13 @@ body {
     gap: 25px;
     align-items: center;
     justify-content: center;
-    
+
     @include media($tablet) {
-      margin: 0 50px;
+      // margin: 0 50px;
     }
 
     @include media($mobile) {
-      padding: 0 10px;
+      // padding: 0 10px;
     }
   }
 
@@ -154,47 +163,47 @@ body {
     color: white;
     font-family: $serif;
     font-weight: bold;
-    font-size: 48px;
-    width: 613px;
-    
+    font-size: 3rem;
+    text-align: center;
+    // width: 613px;
+
     span {
       color: $primary;
     }
-    
+
     @include media($tablet) {
-      width: 100%;
+      // width: 100%;
     }
 
     @include media($mobile) {
-      width: 100%;
-      font-size: 24px;
+      font-size: 2.5rem;
     }
   }
 
   &__line {
-    width: auto;
+    width: 180px;
     height: 1px;
-    
-    @include media($tablet) {
-      width: 200px;
-      
-    }
+    background-color: $primary;
 
-    @include media($mobile) {
-      width: 100px;
-    }
+    // @include media($tablet) {
+    //   width: 200px;
+    // }
+
+    // @include media($mobile) {
+    //   width: 100px;
+    // }
   }
 
   &__subheadline {
     color: white;
-    width: 620px;
+    // width: 620px;
     font-weight: 400px;
     font-family: $sans;
     text-align: center;
-    
+
     @include media($tablet) {
       width: 70%;
-      font-size: 12px;
+      // font-size: 12px;
     }
 
     @include media($mobile) {
@@ -205,28 +214,45 @@ body {
 
 .featuredNews {
   display: flex;
-  height: 459px;
+  // height: 459px;
   flex-direction: column;
-  margin: 25px auto 60px;
+  // margin: 25px auto 60px;
   justify-content: center;
   align-items: center;
-  row-gap: 30px;
-  
-  
+  gap: 30px;
+
   @include media($tablet) {
-    margin: 25px 50px 60px; 
+    // margin: 25px 50px 60px;
+    // width: 80%;
   }
 
   @include media($mobile) {
-    margin: 25px 10px 60px; 
+    align-items: initial;
+    padding: 5px;
+  }
+
+  &__container {
+    // border: 1px solid red;
+    margin: 25px auto 60px;
+    // border: 1px solid red;
+
+    @include media($mobile) {
+      margin-inline: 0px;
+    }
   }
 
   &__headingContainer {
-    width: 1020px;
-    height: 49px;
+    // width: 100%;
+    // height: 49px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 25px;
+
+    @include media($mobile) {
+      // align-items: baseline;
+      flex-direction: column;
+    }
   }
 
   &__heading {
@@ -240,77 +266,91 @@ body {
     text-decoration: none;
     color: $primary;
     position: relative;
-
   }
 }
 
 // start
 .featuredNewsArticles {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  // grid-column-gap: 10px;
+  // grid-row-gap: 10px;
+  gap: 10px;
 
-  // @include media($tablet) {
-  //   grid-template-columns: 1fr; // One column for tablet
-  // }
+  @include media($tablet) {
+    grid-template-columns: 1fr; // One column for tablet
+    place-items: center;
+  }
 
   // @include media($mobile) {
   //   grid-template-columns: 1fr; // One column for mobile
   // }
-  
+
   &__leftCard {
     grid-area: 1 / 1 / 3 / 2;
-    background-image: url('../assets/images/featured_article_left.png');
+    background-image: url("../assets/images/featured_article_left.png");
     background-size: cover;
     width: 500px;
     height: 380px;
-    
-  
+
     // img {
     //   width: 100%;
     //   height: 100%;
     //   object-fit: cover;
-  
-    //   @include media($tablet) {
-    //     height: 300px; // Set fixed height for tablets
-    //   }
-  
-    //   @include media($mobile) {
-    //     height: 300px; // Set fixed height for mobile
-    //   }
-    // }
+
+    @include media($tablet) {
+      height: 300px; // Set fixed height for tablets
+    }
+
+    @include media($mobile) {
+      // height: 300px; // Set fixed height for mobile
+      width: 100%;
+    }
   }
-  
+
+  &_right {
+    display: grid;
+    gap: 10px;
+    width: 100%;
+  }
+
   &__rightCardTop {
-    background-image: url('../assets/images/featured_article_right_top.png');
+    background-image: url("../assets/images/featured_article_right_top.png");
     grid-area: 1 / 2 / 2 / 3;
     background-size: cover;
     width: 510px;
     height: 185px;
-      // @include media($tablet) {
-      //   width: 50%; // Ensure full width coverage on tablets
-      //   height: 100px; // Uniform height for top and bottom images on tablets
-      // }
-  
-      // @include media($mobile) {
-      //   // width: 140%; // Ensure full width coverage on mobile
-      //   height: 300px; // Uniform height for top and bottom images on mobile
-      // }
-    
+    @include media($tablet) {
+      // width: 50%; // Ensure full width coverage on tablets
+      grid-area: 1 / 1 / 2 / 3;
+      height: 300px;
+      width: 100%;
+    }
+
+    @include media($mobile) {
+      // Ensure full width coverage on mobile
+    }
   }
-    
+
   &__rightCardBottom {
     grid-area: 2 / 2 / 3 / 3;
-    background-image: url('../assets/images/featured_article_right_bottom.png');
+    background-image: url("../assets/images/featured_article_right_bottom.png");
     background-size: cover;
     width: 510px;
     height: 185px;
-  }
 
- 
+    @include media($tablet) {
+      // width: 50%; // Ensure full width coverage on tablets
+      grid-area: 2 / 1 / 3 / 3;
+      height: 300px;
+      width: 100%;
+    }
+
+    @include media($mobile) {
+      // Ensure full width coverage on mobile
+    }
+  }
 }
 
 .semiTransparent {
@@ -321,7 +361,7 @@ body {
 }
 
 .tagPremiumContainer {
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -340,10 +380,24 @@ body {
 .latestNews {
   border-top: 1.1px solid #113f55;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   // height: 1004px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include media($mobile) {
+      // padding: 5px;
+    }
+  }
+
+  &__heading_wrapper {
+    padding: 10px;
+  }
 
   &__heading {
     margin-top: 59px;
@@ -357,7 +411,6 @@ body {
   &__line {
     margin-top: 16px;
   }
-
 
   &__subheading {
     width: 400px;
@@ -387,7 +440,7 @@ body {
   justify-content: space-around;
   align-items: center;
   margin-top: 40px;
- 
+
   &__topics {
     color: white;
     font-size: 16px;
@@ -395,11 +448,11 @@ body {
     font-family: $serif;
     text-align: center;
     text-decoration: none;
-    
+
     &:hover {
       color: $primary;
     }
-    
+
     &--active {
       background-color: $primary;
       border-radius: 21px;
@@ -411,13 +464,12 @@ body {
       font-family: $serif;
       text-align: center;
       text-decoration: none;
-      
+
       &:hover {
         color: #000;
       }
     }
   }
-  
 }
 
 .articleContainer {
@@ -427,7 +479,6 @@ body {
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 23px;
-  
 }
 
 .article {
@@ -436,24 +487,21 @@ body {
   height: 160px;
   background-color: #000;
   border-radius: 0 10px 10px 0;
-  
+
   &__img {
     height: 160px;
     width: 187px;
-  
   }
 
   &__premium {
     width: 25px;
     height: 25px;
     position: absolute;
-    margin: 13px 0 0 17px
+    margin: 13px 0 0 17px;
   }
 }
 .aritcleCard {
   padding: 30px 0 0 18px;
-  
-
 }
 
 .tag {
@@ -470,7 +518,6 @@ body {
   justify-content: center;
   // margin-top: 30px;
   // margin-left: 18px;
-  
 }
 
 .articleInfo {
@@ -479,8 +526,8 @@ body {
   gap: 3px;
   margin-top: 15px;
 
-
-  &__date, &__author {
+  &__date,
+  &__author {
     font-family: $sans;
     font-size: 16px;
     font-weight: normal;
@@ -516,9 +563,9 @@ body {
   // width: 1440px;
   height: 239px;
   margin: 73px 0 0;
-  
-  background-image: url('../assets/images/premium_banner_bg.png');
-  background-size: cover; 
+
+  background-image: url("../assets/images/premium_banner_bg.png");
+  background-size: cover;
 
   &__overlay {
     position: relative;
@@ -528,9 +575,8 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-  
   }
-  
+
   &__heading {
     width: 255px;
     height: 144px;
@@ -565,7 +611,7 @@ body {
     color: #d5d5d5;
   }
 
-  &__button{
+  &__button {
     padding: 9px 40px;
     height: 37px;
     border-radius: 55px;
@@ -578,7 +624,6 @@ body {
   }
 }
 
-
 .footer {
   height: 210px;
   position: relative;
@@ -588,7 +633,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: black;
-  
+
   &__followUs {
     width: 400px;
     height: 38px;
@@ -612,7 +657,7 @@ body {
   gap: 10px;
   width: 110px;
   height: 20px;
-  
+
   img {
     width: 20px;
     height: 20px;
@@ -623,16 +668,18 @@ body {
 //   margin-top: 20px;
 // }
 
-
-
-
-
-.article, .featuredNewsArticles__leftCard, .featuredNewsArticles__rightCardTop, .featuredNewsArticles__rightCardBottom {
+.article,
+.featuredNewsArticles__leftCard,
+.featuredNewsArticles__rightCardTop,
+.featuredNewsArticles__rightCardBottom {
   position: relative;
   overflow: hidden; // Ensures the image and overlay don't exceed the article boundary
 
   // Article image styles
-  .article__img, .featuredNewsArticles__leftCard::before, .featuredNewsArticles__rightCardTop::before, .featuredNewsArticles__rightCardBottom::before {
+  .article__img,
+  .featuredNewsArticles__leftCard::before,
+  .featuredNewsArticles__rightCardTop::before,
+  .featuredNewsArticles__rightCardBottom::before {
     // width: 100%;
     height: 100%;
     object-fit: cover;
@@ -640,13 +687,14 @@ body {
   }
 
   // Apply hover effect to the image
-  &:hover .article__img, &:hover::before {
+  &:hover .article__img,
+  &:hover::before {
     transform: scale(1.1); // Slight zoom on hover
   }
 
   // Overlay effect for featured articles
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -663,7 +711,8 @@ body {
   }
 
   // Content over image remains on top
-  .semiTransparent, .aritcleCard {
+  .semiTransparent,
+  .aritcleCard {
     position: relative;
     z-index: 1; // Ensure the text and content stay above the overlay
   }

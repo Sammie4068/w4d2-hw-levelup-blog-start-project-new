@@ -1,214 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Levelup blog</title>
+    <link rel="stylesheet" href="dist/styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Levelup blog</title>
-  <link rel="stylesheet" href="dist/styles.css">
-</head>
+  <body>
+    <div class="padding">
+      <header class="header">
+        <nav class="headerNav">
+          <h1 class="header__logo">Academy<span>blog</span></h1>
+          <ul class="headerNav__list">
+            <li><a href="">Articles</a></li>
+            <li><a href="">Premium</a></li>
+            <li><a href="">Sign in</a></li>
+          </ul>
+          <img
+            src="/assets/icons/menu.svg"
+            alt=""
+            class="headerNav__hamburger"
+          />
+        </nav>
+      </header>
+      <main>
+        <section class="hero">
+          <div class="hero__textContainer">
+            <p class="hero__headline">
+              Lorem ipsum dolor <span>sit amet</span>
+            </p>
+            <!-- <img src="/assets/images/hero_line.png" alt="" class="hero__line"> -->
+            <span class="hero__line"></span>
+            <p class="hero__subheadline">
+              Donec non massa auctor, dictum ante eu, ultrices eros. Sed sit
+              amet augue nec diam tempor placerat. Integer dignissim lacinia
+              turpis.
+            </p>
+          </div>
+        </section>
 
-<body>
-  <div class="padding">
-    <header class="header">
-      <nav class="headerNav">
-        <h1 class="header__logo">Academy<span>blog</span></h1>
-        <ul class="headerNav__list">
-          <li><a href="">Articles</a></li>
-          <li><a href="">Premium</a></li>
-          <li><a href="">Sign in</a></li>
-        </ul>
-        <img src="/assets/icons/menu.svg" alt="" class="headerNav__hamburger">
-      </nav>
-    </header>
-    <main>
-      <section class="hero">
-        <div class="hero__textContainer">
-          <p class="hero__headline">Lorem ipsum dolor <span>sit amet</span></p>
-          <img src="/assets/images/hero_line.png" alt="" class="hero__line">
-          <p class="hero__subheadline">
-            Donec non massa auctor, dictum ante eu, ultrices eros. 
-            Sed sit amet augue nec diam tempor placerat. Integer dignissim lacinia turpis.
-          </p>
-        </div>
-      </section>
-      
-      <section class="featuredNews">
-        <div class="featuredNews__headingContainer">
-          <h1 class="featuredNews__heading">Featured news</h1>
-          <h4><a href="" class="featuredNews__allFeatured">All featured news</a></h4>
-        </div>
-        
-        <div class="featuredNewsArticles">
-          
-          <div class="featuredNewsArticles__leftCard">
-            <div class="semiTransparent">
-              <div class="tagPremiumContainer">
-                <div class="tag">Design</div>
-                <img src="/assets/images/premium.png" alt="">
-              </div>
-              <div class="articleInfo featuredArticles">
-                <p class="articleInfo__date">May, 4 2024</p>
-                <p class="articleInfo__title">Lorem ipsum dolor sit</p>
-                <p class="articleInfo__author">By: Author Name</p>
-              </div>
-              
-            </div> 
-          </div>
-          
-          <div class="featuredNewsArticles__rightCardTop">
-            <div class="semiTransparent">
-              <div class="tagPremiumContainer">
-                <div class="tag">Design</div>
-                <img src="/assets/images/premium.png" alt="">
-              </div>
-              <div class="articleInfo featuredArticles">
-                <p class="articleInfo__date">May, 4 2024</p>
-                <p class="articleInfo__title">Lorem ipsum dolor sit</p>
-                <p class="articleInfo__author">By: Author Name</p>
-              </div>
-              
+        <section class="featuredNews">
+          <!-- Added extra div, "featuredNews__container", to wrap the entire featureNews elements -->
+          <div class="featuredNews__container">
+            <div class="featuredNews__headingContainer">
+              <h1 class="featuredNews__heading">Featured news</h1>
+              <h4>
+                <a href="" class="featuredNews__allFeatured"
+                  >All featured news</a
+                >
+              </h4>
             </div>
-          </div>
-          <div class="featuredNewsArticles__rightCardBottom">
-            <div class="semiTransparent">
-              <div class="tagPremiumContainer">
-                <div class="tag">Design</div>
-                <img src="/assets/images/premium.png" alt="">
-              </div>
-              <div class="articleInfo featuredArticles">
-                <p class="articleInfo__date">May, 4 2024</p>
-                <p class="articleInfo__title">Lorem ipsum dolor sit</p>
-                <p class="articleInfo__author">By: Author Name</p>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <section class="latestNews">
-        <h1 class="latestNews__heading">Latest news</h1>
-        <img src="/assets/images/latest_news_line.png" alt="" class="latestNews__line">
-        
-        <p class="latestNews__subheading">Donec non massa auctor, dictum ante eu, ultrices eros. Sed sit amet augue nec diam tempor placerat.</p>
-        
-        <div class="topicContainer">
-          <a href="" class="topicContainer__topics--active">All topics</a>
-          <a href="" class="topicContainer__topics ">AI</a>
-          <a href="" class="topicContainer__topics">Design</a>
-          <a href="" class="topicContainer__topics">Programming</a>
-        </div>
-        
-        <div class="articleContainer">
-          
-          <article class="article">
-            <img src="/assets/images/article_img.png" alt="" class="article__img">
-            <img src="/assets/images/premium.png" alt="" class="article__premium">
-            <div class="aritcleCard">
-              <div class="tag">Design</div>
-              <div class="articleInfo">
-                <p class="articleInfo__date">May, 4 2024</p>
-                <p class="articleInfo__title">Lorem ipsum dolor sit</p>
-                <p class="articleInfo__author">By: Author Name</p>
-              </div>
-            </div>
-          </article>
-          
-          <article class="article">
-            <img src="/assets/images/article_img.png" alt="" class="article__img">
-            <img src="/assets/images/premium.png" alt="" class="article__premium">
-            <div class="aritcleCard">
-              <div class="tag">Design</div>
-              <div class="articleInfo">
-                <p class="articleInfo__date">May, 4 2024</p>
-                <p class="articleInfo__title">Lorem ipsum dolor sit</p>
-                <p class="articleInfo__author">By: Author Name</p>
-              </div>
-            </div>
-          </article>
-          
-          <article class="article">
-            <img src="/assets/images/article_img.png" alt="" class="article__img">
-            <img src="/assets/images/premium.png" alt="" class="article__premium">
-            <div class="aritcleCard">
-              <div class="tag">Design</div>
-              <div class="articleInfo">
-                <p class="articleInfo__date">May, 4 2024</p>
-                <p class="articleInfo__title">Lorem ipsum dolor sit</p>
-                <p class="articleInfo__author">By: Author Name</p>
-              </div>
-            </div>
-          </article>
-          
-          <article class="article">
-            <img src="/assets/images/article_img.png" alt="" class="article__img">
-            <img src="/assets/images/premium.png" alt="" class="article__premium">
-            <div class="aritcleCard">
-              <div class="tag">Design</div>
-              <div class="articleInfo">
-                <p class="articleInfo__date">May, 4 2024</p>
-                <p class="articleInfo__title">Lorem ipsum dolor sit</p>
-                <p class="articleInfo__author">By: Author Name</p>
-              </div>
-            </div>
-          </article>
-          
-          <article class="article">
-            <img src="/assets/images/article_img.png" alt="" class="article__img">
-            <img src="/assets/images/premium.png" alt="" class="article__premium">
-            <div class="aritcleCard">
-              <div class="tag">Design</div>
-              <div class="articleInfo">
-                <p class="articleInfo__date">May, 4 2024</p>
-                <p class="articleInfo__title">Lorem ipsum dolor sit</p>
-                <p class="articleInfo__author">By: Author Name</p>
-              </div>
-            </div>
-          </article>
-          
-          
-          <article class="article">
-            <img src="/assets/images/article_img.png" alt="" class="article__img">
-            <img src="/assets/images/premium.png" alt="" class="article__premium">
-            <div class="aritcleCard">
-              <div class="tag">Design</div>
-              <div class="articleInfo">
-                <p class="articleInfo__date">May, 4 2024</p>
-                <p class="articleInfo__title">Lorem ipsum dolor sit</p>
-                <p class="articleInfo__author">By: Author Name</p>
-              </div>
-            </div>
-          </article>
-          
-        </div>
-        <button class="latestNews__button">News page</button>
-      </section>
-      
-      <section class="premiumBanner">
-        <div class="premiumBanner__overlay">
-          <p class="premiumBanner__heading">Start <span>premium</span> membership</p>
-          <p class="premiumBanner__subheading">Quisque a tincidunt tellus, sed auctor odio. 
-            Nullam fringilla purus quis augue tincidunt ultrices. 
-            Nunc vitae malesuada nisi, nec eleifend ante.
-          </p>
-          <button class="premiumBanner__button">Start premium</button>
-        </div>
-      </section>
-    </main>
-    
-    <footer class="footer">
-      <p class="footer__followUs">Follow us on social media</p>
-      <div class="iconContainer">
-        <a href=""><img src="/assets/images/fb_icon.png" alt=""></a>
-        <a href=""><img src="/assets/images/tw_icon.png" alt=""></a>
-        <a href=""><img src="/assets/images/pn_icon.png" alt=""></a>
-        <a href=""><img src="/assets/images/be_icon.png" alt=""></a>
-        
-        
-      </div>
-    </footer>
-  </div>
-</body>
 
+            <div class="featuredNewsArticles">
+              <div class="featuredNewsArticles__leftCard">
+                <div class="semiTransparent">
+                  <div class="tagPremiumContainer">
+                    <div class="tag">Design</div>
+                    <img src="/assets/images/premium.png" alt="" />
+                  </div>
+                  <div class="articleInfo featuredArticles">
+                    <p class="articleInfo__date">May, 4 2024</p>
+                    <p class="articleInfo__title">Lorem ipsum dolor sit</p>
+                    <p class="articleInfo__author">By: Author Name</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Added extra div to wrap the two right cards -->
+              <div class="featuredNewsArticles_right">
+                <div class="featuredNewsArticles__rightCardTop">
+                  <div class="semiTransparent">
+                    <div class="tagPremiumContainer">
+                      <div class="tag">Design</div>
+                      <img src="/assets/images/premium.png" alt="" />
+                    </div>
+                    <div class="articleInfo featuredArticles">
+                      <p class="articleInfo__date">May, 4 2024</p>
+                      <p class="articleInfo__title">Lorem ipsum dolor sit</p>
+                      <p class="articleInfo__author">By: Author Name</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="featuredNewsArticles__rightCardBottom">
+                  <div class="semiTransparent">
+                    <div class="tagPremiumContainer">
+                      <div class="tag">Design</div>
+                      <img src="/assets/images/premium.png" alt="" />
+                    </div>
+                    <div class="articleInfo featuredArticles">
+                      <p class="articleInfo__date">May, 4 2024</p>
+                      <p class="articleInfo__title">Lorem ipsum dolor sit</p>
+                      <p class="articleInfo__author">By: Author Name</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="latestNews">
+          <!-- Extra container here too -->
+          <div class="latestNews__container">
+            <div class="latestNews__heading_wrapper">
+              <h1 class="latestNews__heading">Latest news</h1>
+              <img
+                src="/assets/images/latest_news_line.png"
+                alt=""
+                class="latestNews__line"
+              />
+
+              <p class="latestNews__subheading">
+                Donec non massa auctor, dictum ante eu, ultrices eros. Sed sit
+                amet augue nec diam tempor placerat.
+              </p>
+            </div>
+
+            <div class="topicContainer">
+              <a href="" class="topicContainer__topics--active">All topics</a>
+              <a href="" class="topicContainer__topics">AI</a>
+              <a href="" class="topicContainer__topics">Design</a>
+              <a href="" class="topicContainer__topics">Programming</a>
+            </div>
+
+            <div class="articleContainer">
+              <article class="article">
+                <img
+                  src="/assets/images/article_img.png"
+                  alt=""
+                  class="article__img"
+                />
+                <img
+                  src="/assets/images/premium.png"
+                  alt=""
+                  class="article__premium"
+                />
+                <div class="aritcleCard">
+                  <div class="tag">Design</div>
+                  <div class="articleInfo">
+                    <p class="articleInfo__date">May, 4 2024</p>
+                    <p class="articleInfo__title">Lorem ipsum dolor sit</p>
+                    <p class="articleInfo__author">By: Author Name</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="article">
+                <img
+                  src="/assets/images/article_img.png"
+                  alt=""
+                  class="article__img"
+                />
+                <img
+                  src="/assets/images/premium.png"
+                  alt=""
+                  class="article__premium"
+                />
+                <div class="aritcleCard">
+                  <div class="tag">Design</div>
+                  <div class="articleInfo">
+                    <p class="articleInfo__date">May, 4 2024</p>
+                    <p class="articleInfo__title">Lorem ipsum dolor sit</p>
+                    <p class="articleInfo__author">By: Author Name</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="article">
+                <img
+                  src="/assets/images/article_img.png"
+                  alt=""
+                  class="article__img"
+                />
+                <img
+                  src="/assets/images/premium.png"
+                  alt=""
+                  class="article__premium"
+                />
+                <div class="aritcleCard">
+                  <div class="tag">Design</div>
+                  <div class="articleInfo">
+                    <p class="articleInfo__date">May, 4 2024</p>
+                    <p class="articleInfo__title">Lorem ipsum dolor sit</p>
+                    <p class="articleInfo__author">By: Author Name</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="article">
+                <img
+                  src="/assets/images/article_img.png"
+                  alt=""
+                  class="article__img"
+                />
+                <img
+                  src="/assets/images/premium.png"
+                  alt=""
+                  class="article__premium"
+                />
+                <div class="aritcleCard">
+                  <div class="tag">Design</div>
+                  <div class="articleInfo">
+                    <p class="articleInfo__date">May, 4 2024</p>
+                    <p class="articleInfo__title">Lorem ipsum dolor sit</p>
+                    <p class="articleInfo__author">By: Author Name</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="article">
+                <img
+                  src="/assets/images/article_img.png"
+                  alt=""
+                  class="article__img"
+                />
+                <img
+                  src="/assets/images/premium.png"
+                  alt=""
+                  class="article__premium"
+                />
+                <div class="aritcleCard">
+                  <div class="tag">Design</div>
+                  <div class="articleInfo">
+                    <p class="articleInfo__date">May, 4 2024</p>
+                    <p class="articleInfo__title">Lorem ipsum dolor sit</p>
+                    <p class="articleInfo__author">By: Author Name</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="article">
+                <img
+                  src="/assets/images/article_img.png"
+                  alt=""
+                  class="article__img"
+                />
+                <img
+                  src="/assets/images/premium.png"
+                  alt=""
+                  class="article__premium"
+                />
+                <div class="aritcleCard">
+                  <div class="tag">Design</div>
+                  <div class="articleInfo">
+                    <p class="articleInfo__date">May, 4 2024</p>
+                    <p class="articleInfo__title">Lorem ipsum dolor sit</p>
+                    <p class="articleInfo__author">By: Author Name</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <button class="latestNews__button">News page</button>
+          </div>
+        </section>
+
+        <section class="premiumBanner">
+          <div class="premiumBanner__overlay">
+            <p class="premiumBanner__heading">
+              Start <span>premium</span> membership
+            </p>
+            <p class="premiumBanner__subheading">
+              Quisque a tincidunt tellus, sed auctor odio. Nullam fringilla
+              purus quis augue tincidunt ultrices. Nunc vitae malesuada nisi,
+              nec eleifend ante.
+            </p>
+            <button class="premiumBanner__button">Start premium</button>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__followUs">Follow us on social media</p>
+        <div class="iconContainer">
+          <a href=""><img src="/assets/images/fb_icon.png" alt="" /></a>
+          <a href=""><img src="/assets/images/tw_icon.png" alt="" /></a>
+          <a href=""><img src="/assets/images/pn_icon.png" alt="" /></a>
+          <a href=""><img src="/assets/images/be_icon.png" alt="" /></a>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
