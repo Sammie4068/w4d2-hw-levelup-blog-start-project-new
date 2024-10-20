@@ -341,12 +341,11 @@ body {
 }
 @media (max-width: 415px) {
   .latestNews__subheading {
-    width: 51%;
+    width: 90%;
   }
 }
 
 .topicContainer {
-  width: 40%;
   height: 36px;
   border-radius: 40px;
   padding: 5px;
@@ -357,11 +356,6 @@ body {
   justify-content: space-around;
   align-items: center;
   margin-top: 40px;
-}
-@media (max-width: 415px) {
-  .topicContainer {
-    width: 35%;
-  }
 }
 .topicContainer__topics {
   color: white;
@@ -407,7 +401,6 @@ body {
 .article {
   display: flex;
   width: 100%;
-  height: 160px;
   background-color: #000;
   border-radius: 0 10px 10px 0;
 }
@@ -430,6 +423,7 @@ body {
 
 .aritcleCard {
   padding: 30px 0 10px 18px;
+  width: 100%;
 }
 
 .tag {
@@ -466,6 +460,7 @@ body {
   font-size: 24px;
   font-weight: bold;
   text-align: left;
+  text-wrap: nowrap;
   color: #fff;
 }
 
@@ -483,23 +478,32 @@ body {
 }
 
 .premiumBanner {
-  height: 239px;
-  margin: 73px 0 0;
-  background-image: url("../assets/images/premium_banner_bg.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.66)), url("../assets/images/premium_banner_bg.png");
   background-size: cover;
-}
-.premiumBanner__overlay {
-  position: relative;
-  height: 239px;
-  background-color: rgba(0, 0, 0, 0.66);
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
+.premiumBanner__overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  width: 70%;
+  margin: 20px auto;
+}
+@media (max-width: 1024px) {
+  .premiumBanner__overlay {
+    flex-direction: column;
+  }
+}
+@media (max-width: 415px) {
+  .premiumBanner__overlay {
+    width: 100%;
+    padding: 20px 10px;
+  }
+}
 .premiumBanner__heading {
-  width: 255px;
-  height: 144px;
   flex-grow: 0;
   font-family: "Alegreya", serif;
   font-size: 48px;
@@ -509,14 +513,18 @@ body {
   text-align: left;
   color: #fff;
 }
+@media (max-width: 415px) {
+  .premiumBanner__heading {
+    width: 100%;
+    font-size: 35px;
+    text-align: center;
+  }
+}
 .premiumBanner__heading span {
   color: #2CBCFF;
 }
 .premiumBanner__subheading {
-  width: 400px;
-  height: 72px;
   flex-grow: 0;
-  margin: 36px 92px;
   font-family: "Alegreya Sans", sans-serif;
   font-size: 20px;
   font-weight: normal;
@@ -527,9 +535,15 @@ body {
   text-align: left;
   color: #d5d5d5;
 }
+@media (max-width: 415px) {
+  .premiumBanner__subheading {
+    text-align: center;
+    width: 100%;
+  }
+}
 .premiumBanner__button {
+  width: 40%;
   padding: 9px 40px;
-  height: 37px;
   border-radius: 55px;
   background-color: #2CBCFF;
   font-family: "Alegreya Sans", sans-serif;
@@ -537,6 +551,12 @@ body {
   font-weight: bold;
   text-align: center;
   color: #000;
+  border: none;
+}
+@media (max-width: 415px) {
+  .premiumBanner__button {
+    width: 70%;
+  }
 }
 
 .footer {
