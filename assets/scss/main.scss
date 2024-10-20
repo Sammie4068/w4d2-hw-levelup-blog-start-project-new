@@ -390,13 +390,16 @@ body {
     justify-content: center;
     align-items: center;
 
-    @include media($mobile) {
-      // padding: 5px;
-    }
+    // @include media($tablet) {
+    //   align-items: initial;
+    // }
   }
 
   &__heading_wrapper {
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   &__heading {
@@ -409,7 +412,11 @@ body {
   }
 
   &__line {
-    margin-top: 16px;
+    display: flex;
+    width: 120px;
+    height: 1px;
+    background-color: $primary;
+    margin: 24px 0px;
   }
 
   &__subheading {
@@ -425,21 +432,34 @@ body {
     letter-spacing: normal;
     text-align: center;
     color: #fff;
+
+    @include media($mobile) {
+      width: 51%;
+    }
   }
 }
 
 .topicContainer {
-  width: 418px;
+  // width: 418px;
+  width: 40%;
   height: 36px;
   border-radius: 40px;
   padding: 5px;
   background-color: black;
-  border: 1px solid $primary;
+  border: 3px solid $primary;
   display: flex;
   gap: 30px;
   justify-content: space-around;
   align-items: center;
   margin-top: 40px;
+
+  // @include media($tablet) {
+  //   margin: 40px auto;
+  // }
+
+  @include media($mobile) {
+    width: 35%;
+  }
 
   &__topics {
     color: white;
@@ -479,18 +499,33 @@ body {
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 23px;
+
+  @include media($tablet) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .article {
   display: flex;
-  width: 500px;
+  width: 100%;
   height: 160px;
   background-color: #000;
   border-radius: 0 10px 10px 0;
 
+  @include media($tablet) {
+    // margin: 0px auto;
+    // width: 60%;
+  }
+
+  @include media($mobile) {
+    height: 100%;
+    flex-direction: column;
+  }
+
   &__img {
-    height: 160px;
-    width: 187px;
+    height: 300px;
+    // width: 187px;
+    width: 100%;
   }
 
   &__premium {
@@ -501,10 +536,11 @@ body {
   }
 }
 .aritcleCard {
-  padding: 30px 0 0 18px;
+  padding: 30px 0 10px 18px;
 }
 
 .tag {
+  width: 60px;
   display: inline-flex;
   background-color: $primary;
   font-weight: bold;
@@ -548,8 +584,10 @@ body {
 .latestNews__button {
   // width: 180px;
   padding: 9px 55px;
-  height: 37px;
-  margin: 48px 420px 0;
+  // height: 37px;
+  // margin: 48px 420px 0;
+  margin: 40px auto;
+  border: none;
   border-radius: 55px;
   background-color: $primary;
   font-family: $sans;
